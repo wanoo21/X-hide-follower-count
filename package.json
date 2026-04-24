@@ -4,6 +4,14 @@
   "private": true,
   "description": "Chrome extension: replace X (Twitter) follower / following counts with ∞",
   "license": "MIT",
+  "homepage": "https://github.com/wanoo21/X-hide-follower-count",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanoo21/X-hide-follower-count.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wanoo21/X-hide-follower-count/issues"
+  },
   "scripts": {
     "deploy": "bash ./scripts/package-for-store.sh",
     "package": "bash ./scripts/package-for-store.sh"

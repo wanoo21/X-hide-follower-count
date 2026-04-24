@@ -1,5 +1,7 @@
 # X: hide follower count
 
+**Repository:** [github.com/wanoo21/X-hide-follower-count](https://github.com/wanoo21/X-hide-follower-count)
+
 Open-source Chrome extension (Manifest V3). On [X](https://x.com) it replaces visible **follower** and **following** numbers with **∞** in the browser, so you can focus on posts instead of counts. It runs on profiles, hover cards, and anywhere those stats use the usual site links.
 
 Nothing is uploaded or stored: a content script updates the page locally. Hover a stat after it is hidden to see a short note. Turn the extension off in `chrome://extensions` whenever you want real numbers again.
