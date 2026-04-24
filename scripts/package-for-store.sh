@@ -12,6 +12,7 @@ rm -f "$OUT_ZIP"
 zip -r "$OUT_ZIP" \
   manifest.json \
   content.js \
+  _locales/ \
   icons/ \
   -x "*.DS_Store" -x "*/.DS_Store"
 echo "Created: $OUT_ZIP"

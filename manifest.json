@@ -1,8 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "X: hide follower count",
-  "version": "1.0.0",
-  "description": "Replaces follower and following counts with ∞ on X (profiles, hover cards, and more).",
+  "default_locale": "en",
+  "name": "__MSG_extName__",
+  "version": "1.1.0",
+  "description": "__MSG_extDescription__",
   "homepage_url": "https://github.com/wanoo21/X-hide-follower-count",
   "minimum_chrome_version": "102",
   "icons": {
@@ -12,7 +13,7 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "X: hide follower count — counts are hidden on this site only.",
+    "default_title": "__MSG_browserActionTitle__",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",

@@ -5,11 +5,24 @@ const DEBOUNCE_MS = 40;
 const HIDE_FOLLOWING = false;
 
 /** Shown on hover over the stat after the count is replaced. */
-const FOLLOWER_TOOLTIP =
-  'Follower count hidden by the "X: hide follower count" extension. Disable or remove the extension to see the number.';
+const TOOLTIP_FALLBACK = {
+  followerTooltip:
+    'Follower count hidden by the "X: hide follower count" extension. Disable or remove the extension to see the number.',
+  followingTooltip:
+    'Following count hidden by the "X: hide follower count" extension. Disable or remove the extension to see the number.',
+};
 
-const FOLLOWING_TOOLTIP =
-  'Following count hidden by the "X: hide follower count" extension. Disable or remove the extension to see the number.';
+function getTooltipMessage(key) {
+  try {
+    if (typeof chrome !== "undefined" && chrome.i18n?.getMessage) {
+      const t = chrome.i18n.getMessage(key);
+      if (t) return t;
+    }
+  } catch {
+    // ignore
+  }
+  return TOOLTIP_FALLBACK[key] || "";
+}
 
 function isFollowerLink(anchor) {
   try {
@@ -106,11 +119,11 @@ function run() {
   for (const a of document.querySelectorAll(
     'a[href*="/followers"], a[href*="/verified_followers"]'
   )) {
-    if (isFollowerLink(a)) replaceStatCount(a, FOLLOWER_TOOLTIP);
+    if (isFollowerLink(a)) replaceStatCount(a, getTooltipMessage("followerTooltip"));
   }
   if (HIDE_FOLLOWING) {
     for (const a of document.querySelectorAll('a[href*="/following"]')) {
-      if (isFollowingLink(a)) replaceStatCount(a, FOLLOWING_TOOLTIP);
+      if (isFollowingLink(a)) replaceStatCount(a, getTooltipMessage("followingTooltip"));
     }
   }
 }

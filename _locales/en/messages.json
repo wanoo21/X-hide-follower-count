@@ -1,0 +1,17 @@
+{
+  "extName": {
+    "message": "X: hide follower count"
+  },
+  "extDescription": {
+    "message": "Replaces follower and following counts with ∞ on X (profiles, hover cards, and more)."
+  },
+  "browserActionTitle": {
+    "message": "X: hide follower count — counts are hidden on this site only."
+  },
+  "followerTooltip": {
+    "message": "Follower count hidden by the \"X: hide follower count\" extension. Disable or remove the extension to see the number."
+  },
+  "followingTooltip": {
+    "message": "Following count hidden by the \"X: hide follower count\" extension. Disable or remove the extension to see the number."
+  }
+}
